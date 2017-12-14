@@ -47,7 +47,7 @@ GenomeEstimate<-function(file,kmer_len){
   cat(paste("Single copy region end point: ",single_copy_stop,"\n",sep=""))
   # Calculate the single copy region and its percentage in genome
   single_copy_region<-round(sum(as.numeric(file$frequency[start_point:single_copy_stop])*
-                                  as.numeric(file$counts[start_point:single_copy_stop]))/(mean_coverage*1000000000),3)
+                                  as.numeric(file$counts[start_point:single_copy_stop]))/(mean_coverage*10^9),3)
   single_copy_percentage<-round(single_copy_region*100/genome_size,2)
   # Output result
   cat("Estimated single copy region:",single_copy_region," Gb\n",sep="")
