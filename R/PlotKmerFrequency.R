@@ -5,7 +5,7 @@ PlotKmerFrequency<-function(file,kmer_len,start_point,peak,end_point){
   singleC<-sum(as.numeric(file[start_point:end_point,1]*file[start_point:end_point,2]))/peak
   # Generate a data frame to draw segment line in plot
   df<-data.frame(x1=peak,x2=peak,y1=0,y2=file[peak,2])
-  # this value is used for generating y axis label
+  # this variable will be used for generating y axis label
   c<-as.integer(file[peak,2]/1000000)
   #print(c)
   
@@ -34,7 +34,7 @@ PlotKmerFrequency<-function(file,kmer_len,start_point,peak,end_point){
     scale_x_continuous(breaks=c(0,start_point,peak,end_point,end_point+20))+
     # add a segment line indicating the mean coverage of kmer
     geom_segment(aes(x=x1,y=y1,xend=x2,yend=y2),data=df,color="blue",lty=2,lwd=1)+
-    # some parameter determing the plot style
+    # some parameters for plot style
     theme(plot.title = element_text(hjust = 0.5),
           plot.margin=unit(c(1,1,1,1),"cm"),
           axis.text.x=element_text(size=14,color="black"),
