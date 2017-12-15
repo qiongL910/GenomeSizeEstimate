@@ -16,13 +16,15 @@ Object a contains real counted kmer frequency data from Glycine latifolia whole 
   }
 }
 \details{
-%%  ~~ If necessary, more details than the __description__ above ~~
+The data set comes with 10001 observations with 2 variable. The First column is named with "frequency" whch records the frequency of kmer, and the second column is named with "counts" which records the number of kmers at certain frequency in the data set.
 }
 \source{
-Real data calculated from \emph{Glycine latifolia} sequencing reads.
+Real data calculated from \emph{Glycine latifolia} sequencing reads sequenced on two lanes of Hiseq 2500.
 }
 \references{
-%%  ~~ possibly secondary sources and usages ~~
+More details about \code{jellyfish} software and its function could be found at:
+
+http://www.cbcb.umd.edu/software/jellyfish/
 }
 \examples{
 data(a)
