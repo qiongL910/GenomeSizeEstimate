@@ -4,7 +4,11 @@ PlotKmerFrequency<-function(file,kmer_len,start_point,peak,end_point){
   # A variable to hold the value of single copy region
   singleC<-sum(as.numeric(file[start_point:end_point,1]*file[start_point:end_point,2]))/peak
   # Generate a data frame to draw segment line in plot
-  df<-data.frame(x1=peak,x2=peak,y1=0,y2=file[peak,2])
+  x1<-c(peak)
+  x2<-c(peak)
+  y1<-c(0)
+  y2<-c(file[peak,2])
+  df<-data.frame(x1,x2,y1,y2)
   # this variable will be used for generating y axis label
   c<-as.integer(file[peak,2]/1000000)
   #print(c)
