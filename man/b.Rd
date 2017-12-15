@@ -2,10 +2,11 @@
 \alias{b}
 \docType{data}
 \title{
-Real example data for package \code{GenomeSizeEstmate}
+Example data for package \code{GenomeSizeEstmate}
 }
 \description{
-This is data is the output from function \code{count} in \code{jellyfish} with k-mer length of 30.
+Object \code{b} contains real counted kmer frequency data from \emph{Glycine latifolia} whole genome sequencing project.
+This data is the output from function \code{count} in \code{jellyfish} with k-mer length of 30.
 }
 \usage{data("b")}
 \format{
