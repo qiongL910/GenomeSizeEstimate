@@ -1,0 +1,11 @@
+Package: GenomeSizeEstimate
+Version: 0.0
+Date: 2017-12-15
+Title: Genome Size Estimation Through Kmer Analysis
+Authors@R: person("Qiong", "Liu", role = c("aut", "cre"),
+                  email = "liuqiong891023@gmail.com")
+Author: Qiong Liu [aut, cre]
+Maintainer: Qiong Liu <liuqiong891023@gmail.com>
+Description: This package includes functions to estimate genome size based on counted kmer frequency data, and plot distribution of kmer at verious frequencies.
+Url: https://github.com/qiongliu1023/GenomeSizeEstimate
+License: GPL-3
