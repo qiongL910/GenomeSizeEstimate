@@ -5,7 +5,7 @@
 Plot the kmer frequency distribution
 }
 \description{
-
+This function will utilize part of the output from both function \code{GenomeEstimate} and \code{FindTrustKmer} and plot the distribution of counted kmers at various frequencies. Additionally, it will indicate the mean coverage of kmers, as well as the theoretical poisson distribution of kmer frequency with the mean of kmer coverage.
 }
 \usage{
 PlotKmerFrequency(file, kmer_len, start_point, peak, end_point)
