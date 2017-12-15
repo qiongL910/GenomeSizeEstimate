@@ -1,2 +1,3 @@
 export(FindTrustKmer, GenomeEstimate, PlotKmerFrequency)
 import("ggplot2")
+importFrom("stats", "dpois", "frequency")
