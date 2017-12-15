@@ -27,7 +27,7 @@ PlotKmerFrequency<-function(file,kmer_len,start_point,peak,end_point){
     # add a poisson distribution in the plot indicating the theoretical distribution of kmer frequency
     geom_line(y=dpois((start_point-8):(end_point+20),peak)*singleC,lty=2,color="orangered",lwd=1)+
     # set y axis scale and tick label
-    scale_y_continuous(limit=c(0,c*3*10^6),
+    scale_y_continuous(limits=c(0,c*3*10^6),
                        breaks=seq(0,c*3*10^6,c*10^6),
                        labels=c("0M",paste(c,"M",sep=""),paste(2*c,"M",sep=""),paste(3*c,"M",sep="")))+
     # set x axis scale and tick label
