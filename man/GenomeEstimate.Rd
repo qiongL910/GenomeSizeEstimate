@@ -20,25 +20,33 @@ The length of kmers
 }
 }
 \details{
-%%  ~~ If necessary, more details than the description above ~~
+This function takes the output from \code{jellyfish count} function and the column of the data have to be renamed into "frequency" and "counts" respectively.
+
+The function will first detect the trust kmer starting point, and subsequently identify the mean coverage of kmer after that. It then estimate the gneome size based on the counted trusted kmer and its mean coverage.
+
+The end point of single copy region is detected at the proximal end of bell shape distribution of kmer frequency.
 }
 \value{
 This function returns the mean coverage of kmers, estimated genome size based on kmer analysis, the end point of single copy region, estimated single copy region and the percentage of single copy region in genome. Among which, the mean coverage of kmers, single copy region end point are needed in \code{PlotKmerFrequency} function.
 }
 \references{
-%% ~put references to the literature/web site here ~
+More details about calculation can be referred at:
+
+http://koke.asrc.kanazawa-u.ac.jp/HOWTO/kmer-genomesize.html
+
+https://bioinformatics.uconn.edu/genome-size-estimation-tutorial/
 }
 \author{
 Qiong Liu
 }
 \note{
-%%  ~~further notes~~
+N/A
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+Function \code{FindTrustKmer} and \code{PlotKmerFrequency}
 }
 \examples{
 # load an example data called a with kmer length 19bp

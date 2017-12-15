@@ -21,27 +21,33 @@ The length of kmers.
 }
 }
 \details{
-%%  ~~ If necessary, more details than the description above ~~
+This function takes the output from \code{jellyfish count} function and the column of the data have to be renamed into "frequency" and "counts" respectively.
+
+The function will first detect the trust kmers starting point, and subsequently calculate the total number of trusted and untrusted kmers at various frequency, thus generating the percentage of trusted and untrusted kmers in the data set.
 }
 \value{
 This function will return two values.
-The first value is the starting point of trusted kmer. This value will be useful in the \code{PlotKmerFrequency} function.
+The first value is the starting point of trusted kmers. This value will be useful in the \code{PlotKmerFrequency} function.
 The second value is a vector which contains the total number of all kmers, trusted kmers, and untrusted kmers, as well as the percentage of trusted and untrusted kmers.
 }
 \references{
-%% ~put references to the literature/web site here ~
+More details about calculation can be referred at:
+
+http://koke.asrc.kanazawa-u.ac.jp/HOWTO/kmer-genomesize.html
+
+https://bioinformatics.uconn.edu/genome-size-estimation-tutorial/
 }
 \author{
 Qiong Liu
 }
 \note{
-%%  ~~further notes~~
+N/A
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+Function \code{GenomeEstimate} and \code{PlotKmerFrequency}.
 }
 \examples{
 # load the example data. This gives you an example data called a with kmer length 19bp

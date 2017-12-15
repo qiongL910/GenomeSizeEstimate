@@ -5,7 +5,9 @@
 Plot the kmer frequency distribution
 }
 \description{
-This function will utilize part of the output from both function \code{GenomeEstimate} and \code{FindTrustKmer} and plot the distribution of counted kmers at various frequencies. Additionally, it will indicate the mean coverage of kmers, as well as the theoretical poisson distribution of kmer frequency with the mean of kmer coverage.
+This function will utilize part of the output from both function \code{GenomeEstimate} and \code{FindTrustKmer} and plot the distribution of counted kmers at various frequencies.
+
+Additionally, it will indicate the mean coverage of kmers, as well as the theoretical poisson distribution of kmer frequency with the mean of kmer coverage.
 }
 \usage{
 PlotKmerFrequency(file, kmer_len, start_point, peak, end_point)
@@ -29,25 +31,31 @@ Counted kmer frequency file from \code{jellyfish count} function. The first and 
 }
 }
 \details{
-%%  ~~ If necessary, more details than the description above ~~
+This function takes the output from \code{jellyfish count} function and the column of the data have to be renamed into "frequency" and "counts" respectively.
+
+The function will utilize the output (The starting point of trusted kmer, mean coverage of kmer, and ending point of single copy region) from function \code{FindTrustKmer} and \code{GenomeEstimate}. The theoretical poission distribution of counted kmer frequency is based on the calcualted single copy region and the mean coverage of kmer.
 }
 \value{
 This function will return a plot of counted kmer frequency distribution. Function \code{PlotKmerFrequency} also give a theoratical poisson distribution with a mean of mean coverage of kmers.
 }
 \references{
-%% ~put references to the literature/web site here ~
+More details about calculation can be referred at:
+
+http://koke.asrc.kanazawa-u.ac.jp/HOWTO/kmer-genomesize.html
+
+https://bioinformatics.uconn.edu/genome-size-estimation-tutorial/
 }
 \author{
 Qiong Liu
 }
 \note{
-%%  ~~further notes~~
+N/A
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+Function \code{FindTrustKmer} and \code{GenomeEstimate}
 }
 \examples{
 # load an example data called b
@@ -56,7 +64,7 @@ data(b)
 # Get startingpoint of trusted kmer
 FindTrustKmer(b,30)
 
-# Get the mean covergae of kmer, end point of single copy region
+# Get the mean covergae of kmer, ending point of single copy region
 GenomeEstimate(b,30)
 
 # Plot the figure
