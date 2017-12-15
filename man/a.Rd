@@ -1,0 +1,32 @@
+\name{a}
+\alias{a}
+\docType{data}
+\title{
+Real data for package \code{GenomeSizeEstmate}
+}
+\description{
+%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+}
+\usage{data("a")}
+\format{
+  Real dateset with 10001 observations on the following 2 variables. This is data is the output from function \code{count} in \code{jellyfish} with k-mer length of 19.
+  \describe{
+    \item{\code{frequency}}{The frequency of kmer}
+    \item{\code{counts}}{The counts of kmer at different frequencies}
+  }
+}
+\details{
+%%  ~~ If necessary, more details than the __description__ above ~~
+}
+\source{
+Real data calculated from \emph{Glycine latifolia} sequencing reads.
+}
+\references{
+%%  ~~ possibly secondary sources and usages ~~
+}
+\examples{
+data(a)
+## maybe str(a) ; plot(a) ...
+
+}
+\keyword{datasets}
