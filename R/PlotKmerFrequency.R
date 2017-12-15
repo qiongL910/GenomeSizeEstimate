@@ -14,7 +14,7 @@ PlotKmerFrequency<-function(file,kmer_len,start_point,peak,end_point){
   #print(c)
   
   # Using ggplot function to plot the distribution of kmer frequency
-  ggplot(data=file[(start_point-8):(end_point+20),],mapping=aes(x=frequency,y=counts))+
+  ggplot(data=file[(start_point-8):(end_point+20),],mapping=aes_string(x='frequency',y='counts'))+
     # set the size of line
     geom_line(size=1)+
     # set the plot title
