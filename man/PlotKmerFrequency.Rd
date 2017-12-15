@@ -51,7 +51,7 @@ Qiong Liu
 }
 \examples{
 # load an example data called b
-data(glat_2lane_kmer30)
+data(b)
 
 # Get startingpoint of trusted kmer
 FindTrustKmer(b,30)
