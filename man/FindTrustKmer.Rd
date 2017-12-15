@@ -44,13 +44,13 @@ Qiong Liu
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-# load the example data. This gives you an example data called a
-data(glat_2lane_kmer19)
+# load the example data. This gives you an example data called a with kmer length 19bp
+data(a)
 
 FindTrustKmer(a,19)
 
-# load the example data. This gives you an example data called b
-data(glat_2lane_kmer30)
+# load the example data. This gives you an example data called b with kmer length 30bp
+data(b)
 
 FindTrustKmer(b,30)
 

@@ -7,3 +7,5 @@
 ^.Rhistory$
 ^.RData$
 ^LICENSE$
+^.*\.Rproj$
+^\.Rproj\.user$

@@ -41,12 +41,12 @@ Qiong Liu
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-# load an example data called a
-data(glat_2lane_kmer19)
+# load an example data called a with kmer length 19bp
+data(a)
 GenomeEstimate(a,19)
 
-# load an example data called b
-data(glat_2lane_kmer30)
+# load an example data called b with kmer length 30bp
+data(b)
 GenomeEstimate(b,30)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
